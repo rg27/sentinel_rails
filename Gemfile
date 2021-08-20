@@ -69,3 +69,4 @@ gem 'will_paginate', '~> 3.2', '>= 3.2.1'
 gem 'will_paginate-bootstrap4', '~> 0.2.2'
 gem 'carrierwave', '~> 2.0'
 gem "font-awesome-rails"
+gem 'devise'
