@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Departments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Deptid</th>
+      <th>Deptname</th>
+      <th>Deptstatus</th>
+      <th>Deptcreateddate</th>
+      <th>Deptcreatedby</th>
+      <th>Deptcode</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @departments.each do |department| %>
+      <tr>
+        <td><%= department.id %></td>
+        <td><%= department.deptname %></td>
+        <td><%= department.deptstatus %></td>
+        <td><%= department.deptcreateddate %></td>
+        <td><%= department.deptcreatedby %></td>
+        <td><%= department.deptcode %></td>
+        <td><%= link_to 'Show', department %></td>
+        <td><%= link_to 'Edit', edit_department_path(department) %></td>
+        <td><%= link_to 'Destroy', department, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Department', new_department_path %>

@@ -1,38 +1,47 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-		<%=link_to 'Home', root_path, class:"navbar-brand"%>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="ml-auto navbar-nav">
-               
+<nav id="navbar" class="navbar">
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent header-scrolled">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <%=link_to 'OP360', root_path, class:"navbar-brand text-light"%>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <ul>
+                <li class="nav-item">
+                    <%=link_to 'Home', root_path, class:"navbar-brand text-light"%>
+                </li>
                 <%if user_signed_in?%>
-                    <li class="nav-item d-flex align-items-center">
-                        <%=link_to "Employees", employees_path,  class:"nav-link"%>
+               
+                    <li class="nav-item">
+                        <%=link_to "Employees", employees_path,  class:"navbar-brand text-light"%>
                     </li>   
 
-                     <li class="nav-item d-flex align-items-center">
-                        <%=link_to "Edit Profile", edit_user_registration_path,  class:"nav-link"%>
+                    <li class="nav-item">
+                        <%=link_to "Departments", departments_path,  class:"navbar-brand text-light"%>
+                    </li>   
+
+                    <li class="nav-item">
+                        <%=link_to "Edit Profile", edit_user_registration_path,  class:"navbar-brand text-light"%>
                     </li>  
 
-                    <li class="nav-item d-flex align-items-center">
-                        <%=link_to "Logout", destroy_user_session_path, method: :delete, class:"nav-link"%>
+                    <li class="nav-item">
+                        <%=link_to "Logout", destroy_user_session_path, method: :delete, class:"navbar-brand text-light" %>
                     </li>
                 <% else %>
-                    <li class="nav-item d-flex align-items-center">
-                        <%=link_to "About", about_path, class:"nav-link"%>
+               
+               
+                    <li class="nav-item">
+                        <%= link_to "Signup", new_user_registration_path, class:"nav-link" %>
                     </li>
-                
-                    <li class="nav-item d-flex align-items-center">
-                        <%=link_to 'Sign up', new_user_registration_path, class:"nav-link"%>
+
+                    <li class="nav-item">
+                        <%= link_to "Login", new_user_session_path, class:"nav-link" %>
                     </li>
-				
-                    <li class="nav-item d-flex align-items-center">
-                        <%=link_to 'Sign in', user_session_path, class:"nav-link"%>
-                    </li>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
                 <%end%>
             </ul>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
+    </header>
 </nav>
+

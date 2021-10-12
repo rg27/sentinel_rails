@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  deptid: 1
+  deptname: MyString
+  deptstatus: false
+  deptcreateddate: 2021-09-15
+  deptcreatedby: MyString
+  deptcode: MyString
+
+two:
+  deptid: 1
+  deptname: MyString
+  deptstatus: false
+  deptcreateddate: 2021-09-15
+  deptcreatedby: MyString
+  deptcode: MyString
