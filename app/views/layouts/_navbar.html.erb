@@ -2,7 +2,7 @@
     <header id="header" class="fixed-top d-flex align-items-center header-transparent header-scrolled">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="logo">
-                <%=link_to 'OP360', root_path, class:"navbar-brand text-light"%>
+                <%=link_to 'Office Partners 360', root_path, class:"navbar-brand text-light"%>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
@@ -20,10 +20,6 @@
                     <li class="nav-item">
                         <%=link_to "Departments", departments_path,  class:"navbar-brand text-light"%>
                     </li>   
-
-                    <li class="nav-item">
-                        <%=link_to "Edit Profile", edit_user_registration_path,  class:"navbar-brand text-light"%>
-                    </li>  
 
                     <li class="nav-item">
                         <%=link_to "Logout", destroy_user_session_path, method: :delete, class:"navbar-brand text-light" %>
@@ -44,4 +40,6 @@
         </div>
     </header>
 </nav>
+
+
 
