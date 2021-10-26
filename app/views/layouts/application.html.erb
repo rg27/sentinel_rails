@@ -4,7 +4,6 @@
         <title>SentinelRails</title>
         <%= csrf_meta_tags %>
         <%= csp_meta_tag %>
-
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -22,7 +21,6 @@
     <body>
         <%= render 'layouts/navbar' %>
         <br>
-        
         <div class="mt-5">
             <% if notice %>
                 <%=render 'layouts/alerts'%>
